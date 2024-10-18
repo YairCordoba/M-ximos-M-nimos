@@ -1,9 +1,9 @@
 // scripts.js
 function openGame() {
-  window.open('C:\Users\Admin\Desktop\CALCULO\PIF WEB\Version_2\juego.html', '_blank', 'width=800,height=600');
-  window.open('C:\Users\Admin\Desktop\CALCULO\PIF WEB\Version_2\calculadora.html', '_blank', 'width=800,height=600');
-  window.open('C:\Users\Admin\Desktop\CALCULO\PIF WEB\Version_2\Formulas.html', '_blank', 'width=800,height=600');
-  window.open('C:\Users\Admin\Desktop\CALCULO\PIF WEB\Version_2\Calculo123.html ', '_blank', 'width=800,height=600');
+  window.open('juego.html', '_blank', 'width=800,height=600');
+  window.open('calculadora.html', '_blank', 'width=800,height=600');
+  window.open('Formulas.html', '_blank', 'width=800,height=600');
+  window.open('Calculo123.html ', '_blank', 'width=800,height=600');
 }
 
 
