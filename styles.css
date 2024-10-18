@@ -1,0 +1,198 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #e0f7fa; /* Fondo azul claro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #00796b; /* Azul oscuro para el título */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del contenedor del formulario */
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.1em;
+  color: #00796b; /* Azul oscuro */
+  font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 12px;
+  font-size: 1.1em;
+  border: 1px solid #4caf50; /* Verde claro para los bordes */
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+  border-color: #0288d1; /* Azul al enfocarse */
+}
+
+/* Estilos de los botones */
+button {
+  background-color: #0288d1; /* Azul brillante */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0277bd; /* Azul oscuro */
+}
+
+button[type="button"] {
+  background-color: #388e3c; /* Verde para registrarse */
+  margin-top: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #2c6b2e; /* Color más oscuro al pasar el ratón */
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a.button {
+  background-color: #0288d1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+nav a.button:hover {
+  background-color: #0277bd;
+}
+
+/* Responsividad */
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a.button {
+    padding: 12px 25px;
+  }
+}
+
+/* Resultados */
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #0288d1; /* Azul brillante */
+}
+
+/* Teclado */
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.key {
+  padding: 10px;
+  background: #0288d1; /* Azul brillante */
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.key:hover {
+  background: #0277bd; /* Azul oscuro */
+}
+
+/* Fórmulas */
+.formulas {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e9ecef; /* Gris claro */
+  border-radius: 8px;
+}
+
+.formulas h2 {
+  text-align: center;
+  color: #0277bd; /* Azul oscuro */
+}
+
+.formulas ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.formulas li {
+  margin: 10px 0;
+  color: #0288d1; /* Azul brillante */
+}
+
+/* Gráfico */
+#plot {
+  margin-top: 20px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #b3e5fc; /* Azul suave */
+}

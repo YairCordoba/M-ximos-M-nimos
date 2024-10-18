@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Derivadas y Fórmulas Matemáticas</title>
+
+  <!-- Incluir MathJax para renderizar fórmulas matemáticas -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Enlace a tu archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sección de Fórmulas Importantes -->
+  <div id="fórmulas" class="section" style="display:none;">
+    <h2>Fórmulas Importantes</h2>
+    <ul>
+      <!-- Fórmulas para Derivadas -->
+      <li><strong>Derivada de una función:</strong> $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$</li>
+      
+      <!-- Fórmulas para Derivadas Parciales -->
+      <li><strong>Derivada parcial de una función en x:</strong> $$\frac{\partial f}{\partial x}$$</li>
+      <li><strong>Derivada parcial de una función en y:</strong> $$\frac{\partial f}{\partial y}$$</li>
+      
+      <!-- Fórmulas para Integrales -->
+      <li><strong>Integral definida:</strong> $$\int_a^b f(x) \, dx = F(b) - F(a)$$</li>
+      <li><strong>Integral indefinida:</strong> $$\int f(x) \, dx = F(x) + C$$</li>
+      
+      <!-- Fórmulas de Álgebra Lineal -->
+      <li><strong>Producto escalar de dos vectores:</strong> $$\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^{n} a_i b_i$$</li>
+      <li><strong>Matriz Hessiana:</strong> $$H = \begin{bmatrix} f_{xx} & f_{xy} \\ f_{xy} & f_{yy} \end{bmatrix}$$</li>
+      <li><strong>Determinante de una matriz 2x2:</strong> $$\text{det}(A) = ad - bc$$</li>
+      <li><strong>Inversa de una matriz 2x2:</strong> $$A^{-1} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$</li>
+      
+      <!-- Fórmulas de Matemáticas Básicas -->
+      <li><strong>Fórmula cuadrática:</strong> $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</li>
+      <li><strong>Factorización de un trinomio:</strong> $$ax^2 + bx + c = (px + q)(rx + s)$$</li>
+      <li><strong>Factorización de una diferencia de cuadrados:</strong> $$a^2 - b^2 = (a - b)(a + b)$$</li>
+      <li><strong>Teorema de Pitágoras:</strong> $$a^2 + b^2 = c^2$$</li>
+      <li><strong>Propiedad distributiva:</strong> $$a(b + c) = ab + ac$$</li>
+    </ul>
+  </div>
+
+  <script>
+    // Código para mostrar la sección de fórmulas cuando sea necesario
+    function mostrarFormulas() {
+      const formulasSection = document.getElementById('fórmulas');
+      formulasSection.style.display = 'block';  // Muestra la sección
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub, formulasSection]);  // Renderiza las fórmulas matemáticas
+    }
+
+    // Mostrar las fórmulas en la carga inicial o cuando lo necesites
+    // Puedes activar la función cuando el usuario haga clic en un botón, por ejemplo:
+    mostrarFormulas();
+  </script>
+</body>
+</html>
