@@ -11,20 +11,23 @@ body {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  box-sizing: border-box; /* Asegura que los elementos no se desborden */
 }
 
 h1, h2 {
   text-align: center;
   color: #00796b; /* Azul oscuro para el título */
+  margin: 0; /* Eliminar margen innecesario */
 }
 
 .container {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del espacio disponible */
 }
 
 /* Estilos del contenedor del formulario */
@@ -32,7 +35,7 @@ h1, h2 {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 40px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
@@ -121,9 +124,24 @@ nav a.button:hover {
 }
 
 /* Responsividad */
-@media screen and (max-width: 600px) {
+
+/* Para pantallas pequeñas (móviles y tabletas) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px; /* Menor margen en dispositivos pequeños */
+  }
+
   .form-container {
-    width: 90%;
+    padding: 30px; /* Un poco menos de padding */
+  }
+
+  form {
+    gap: 15px; /* Reducir espacio entre los elementos */
+  }
+
+  button {
+    font-size: 1.1em; /* Tamaño de fuente más pequeño */
+    padding: 10px; /* Botones más compactos */
   }
 
   nav ul {
@@ -133,6 +151,44 @@ nav a.button:hover {
 
   nav a.button {
     padding: 12px 25px;
+  }
+}
+
+/* Para pantallas muy pequeñas (móviles de baja resolución) */
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 20px; /* Menos padding */
+  }
+
+  input[type="text"], input[type="date"], button {
+    font-size: 1em; /* Ajustar tamaño de fuente */
+  }
+
+  h1, h2 {
+    font-size: 1.5em; /* Títulos más pequeños */
+  }
+
+  .container {
+    padding: 15px; /* Menor padding para que no haya desbordes */
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(5, 1fr); /* Ajustar teclado a 5 columnas */
+  }
+
+  .key {
+    padding: 8px; /* Teclas más pequeñas */
+  }
+}
+
+/* Para pantallas grandes */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 800px; /* Aumentar el ancho en pantallas grandes */
+  }
+
+  .form-container {
+    padding: 50px; /* Más espacio en pantallas grandes */
   }
 }
 
